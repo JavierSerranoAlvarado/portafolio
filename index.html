@@ -1,13 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2e5cc30c24.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header id="header">
+      <section class="socialMedia">
+        <div class="socialMedia__list">
+          <a href=""><i class="fab fa-facebook-square"></i></a>
+          <a href=""><i class="fab fa-twitter-square"></i></a>
+          <a href=""><i class="fab fa-github-square"></i></a>
+          <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+      </section>
+      <nav>
+        <div class="logo"><i class="fas fa-book"></i>Mi Portafolio</div>
+        <div>
+          <a href="#">Sobre Mi</a>
+        </div>
+      </nav>
+
+      <section class="intro">
+        <div class="intro--text">
+          <p>Javier Eduardo Serrano Alvarado</p>
+          <p>Java Full Stack Jr Developer</p>
+        </div>
+        <!--   <button type="button" class="btn-entrar"> -->
+        <a class="btn-entrar" href="#container__proyectos">Conoceme!</a>
+        <!--   </button> -->
+      </section>
+    </header>
+    <main id="container__proyectos" class="container__proyectos">
+      <section class="proyectos">
+        <h2>Proyectos</h2>
+        <section class="proyectos__ultimo">
+          <h3 class="proyectos__ultimo--titulo">Ultimo proyecto</h3>
+          <div class="proyectos__ultimo--img">
+            <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
+          </div>
+          <div class="proyectos__ultimo--text">
+            <h3>Ejercicios Basicos de JS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at
+              iure officiis tempora, optio incidunt tempore consequatur aliquid
+              quod, expedita culpa quidem ea voluptatem vitae obcaecati
+              blanditiis rem iste facere!
+            </p>
+            <a
+              href="https://javierserranoalvarado.github.io/EjerciciosBasicosJS/"
+              target="_blank"
+              >Live<i class="fas fa-file-alt"></i
+            ></a>
+            <a
+              href="https://github.com/JavierSerranoAlvarado/EjerciciosBasicosJS"
+              target="_blank"
+              >Repositorio<i class="fab fa-git-square"></i
+            ></a>
+          </div>
+        </section>
+        <section class="proyectos__carrusel">
+          <h3 class="proyectos__carrusel--titulo">Proyectos anteriores</h3>
+          <div class="proyectos__carrusel--card">
+            <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
+            <h3>Ejercicios Basicos de JS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at
+              iure officiis tempora, optio incidunt tempore consequatur aliquid
+              quod, expedita culpa quidem ea voluptatem vitae obcaecati
+              blanditiis rem iste facere!
+            </p>
+            <div class="proyectos__carrusel--links">
+                <a
+              href="https://javierserranoalvarado.github.io/EjerciciosBasicosJS/"
+              target="_blank"
+              >Live<i class="fas fa-file-alt"></i
+            ></a>
+            <a
+              href="https://github.com/JavierSerranoAlvarado/EjerciciosBasicosJS"
+              target="_blank"
+              >Repositorio<i class="fab fa-git-square"></i
+            ></a>
+              </div>
+          </div>
+          <div class="proyectos__carrusel--card">
+            <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
+            <h3>Ejercicios Basicos de JS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at
+              iure officiis tempora, optio incidunt tempore consequatur aliquid
+              quod, expedita culpa quidem ea voluptatem vitae obcaecati
+              blanditiis rem iste facere!
+            </p>
+            <div class="proyectos__carrusel--links">
+                <a
+              href="https://javierserranoalvarado.github.io/EjerciciosBasicosJS/"
+              target="_blank"
+              >Live<i class="fas fa-file-alt"></i
+            ></a>
+            <a
+              href="https://github.com/JavierSerranoAlvarado/EjerciciosBasicosJS"
+              target="_blank"
+              >Repositorio<i class="fab fa-git-square"></i
+            ></a>
+              </div>
+          </div>
+          <div class="proyectos__carrusel--card">
+            <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
+            <h3>Ejercicios Basicos de JS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at
+              iure officiis tempora, optio incidunt tempore consequatur aliquid
+              quod, expedita culpa quidem ea voluptatem vitae obcaecati
+              blanditiis rem iste facere!
+            </p>
+            <div class="proyectos__carrusel--links">
+                <a
+              href="https://javierserranoalvarado.github.io/EjerciciosBasicosJS/"
+              target="_blank"
+              >Live<i class="fas fa-file-alt"></i
+            ></a>
+            <a
+              href="https://github.com/JavierSerranoAlvarado/EjerciciosBasicosJS"
+              target="_blank"
+              >Repositorio<i class="fab fa-git-square"></i
+            ></a>
+              </div>
+          </div>
+          <div class="proyectos__carrusel--card">
+            <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
+            <h3>Ejercicios Basicos de JS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at
+              iure officiis tempora, optio incidunt tempore consequatur aliquid
+              quod, expedita culpa quidem ea voluptatem vitae obcaecati
+              blanditiis rem iste facere!
+            </p>
+            <div class="proyectos__carrusel--links">
+                <a
+              href="https://javierserranoalvarado.github.io/EjerciciosBasicosJS/"
+              target="_blank"
+              >Live<i class="fas fa-file-alt"></i
+            ></a>
+            <a
+              href="https://github.com/JavierSerranoAlvarado/EjerciciosBasicosJS"
+              target="_blank"
+              >Repositorio<i class="fab fa-git-square"></i
+            ></a>
+              </div>
+          </div>
+          <div class="proyectos__carrusel--card">
+            <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
+            <h3>Ejercicios Basicos de JS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at
+              iure officiis tempora, optio incidunt tempore consequatur aliquid
+              quod, expedita culpa quidem ea voluptatem vitae obcaecati
+              blanditiis rem iste facere!
+            </p>
+            <div class="proyectos__carrusel--links">
+                <a
+              href="https://javierserranoalvarado.github.io/EjerciciosBasicosJS/"
+              target="_blank"
+              >Live<i class="fas fa-file-alt"></i
+            ></a>
+            <a
+              href="https://github.com/JavierSerranoAlvarado/EjerciciosBasicosJS"
+              target="_blank"
+              >Repositorio<i class="fab fa-git-square"></i
+            ></a>
+              </div>
+          </div>
+          <div class="proyectos__carrusel--card">
+            <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
+            <h3>Ejercicios Basicos de JS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at
+              iure officiis tempora, optio incidunt tempore consequatur aliquid
+              quod, expedita culpa quidem ea voluptatem vitae obcaecati
+              blanditiis rem iste facere!
+            </p>
+            <div class="proyectos__carrusel--links">
+                <a
+              href="https://javierserranoalvarado.github.io/EjerciciosBasicosJS/"
+              target="_blank"
+              >Live<i class="fas fa-file-alt"></i
+            ></a>
+            <a
+              href="https://github.com/JavierSerranoAlvarado/EjerciciosBasicosJS"
+              target="_blank"
+              >Repositorio<i class="fab fa-git-square"></i
+            ></a>
+              </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>
