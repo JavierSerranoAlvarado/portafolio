@@ -132,7 +132,7 @@ Seccion de proyectos
 
 /* Ultimo proyecto */
 
-.proyectos h2{
+.container__proyectos h2{
     margin-inline-start: 3rem;
 }
 
@@ -141,7 +141,7 @@ Seccion de proyectos
 }
 
 .container__proyectos .proyectos{
-    display:grid;
+    background-color: var(--second-color);
 }
 
 .proyectos__ultimo{
@@ -152,8 +152,9 @@ Seccion de proyectos
         'img texto';
     padding: 1rem 3rem;
     align-items: center;
-    background: var(--second-color);
     column-gap: 1rem;
+    max-width: 980px;
+    margin: auto;
 }
 
 .proyectos__ultimo--titulo{
@@ -227,6 +228,8 @@ Seccion de proyectos
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto 1fr 1fr;
     gap: 1rem;
+    max-width: 980px;
+    margin: auto;
 }
 
 .proyectos__carrusel--titulo{
