@@ -9,6 +9,11 @@ html{
 body{
     font-family: 'Lato', sans-serif;
 }
+
+.grid-container{
+    max-width: 980px;
+    margin: auto;
+}
 /* ///////////////////////////////////////////////////////////////////
 Seccion Hero del documento
 ///////////////////////////////////////////////////////////////// */
@@ -153,8 +158,6 @@ Seccion de proyectos
     padding: 1rem 3rem;
     align-items: center;
     column-gap: 1rem;
-    max-width: 980px;
-    margin: auto;
 }
 
 .proyectos__ultimo--titulo{
@@ -223,13 +226,10 @@ Seccion de proyectos
 
 .proyectos__carrusel{
     padding: 0 3rem;
-    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto 1fr 1fr;
     gap: 1rem;
-    max-width: 980px;
-    margin: auto;
 }
 
 .proyectos__carrusel--titulo{
@@ -241,11 +241,94 @@ Seccion de proyectos
 
 .proyectos__carrusel--card{
     display:grid;
-    padding:1rem;
     grid-template-rows: 1fr auto auto auto;
+    border: 1px solid var(--second-color);
+    box-shadow: 2px 2px 16px -2px #474755a6;
 }
 
 .proyectos__carrusel--card img{
     max-width: 100%;
     justify-self: center;
+}
+
+.proyectos__carrusel--info{
+    padding:1rem;
+}
+
+/* ///////////////////////////////////////////////////
+Seccion de perfil
+/////////////////////////////////////////////////// */
+.perfil{
+    width: 100%;
+}
+
+.perfil--titulo{
+    margin-inline-start: 3rem;
+}
+
+.perfil__container{
+    background-color: var(--second-color);
+}
+
+.perfil__container--info{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.perfil__container--info img{
+    background-color: var(--main-color);
+    border-radius: 50%;
+    height: 15rem;
+}
+
+.perfil__container--extrainfo{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:2rem;
+}
+.perfil__container--extrainfo h3{
+    grid-column: 1/4;
+}
+
+.perfil__container--tecnologias{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+
+.perfil__container--tecnologias h3{
+    grid-column: 1/4;
+}
+
+.perfil__container--ingles h3{
+    text-align: center;
+}
+
+.perfil__container--ingles p{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.perfil__container--ingles img{
+    width: 100%;
+}
+
+.perfil__container--hobbies h3{
+    text-align: center;
+}
+
+.perfil__container--hobbies ul{
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.perfil__container--hobbies ul li{
+    margin-block-end: 1rem;
+    font-size: 1.2rem;
 }

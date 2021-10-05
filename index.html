@@ -22,8 +22,9 @@
     <header id="header">
       <section class="socialMedia">
         <div class="socialMedia__list">
+          <!-- 
           <a href=""><i class="fab fa-facebook-square"></i></a>
-          <a href=""><i class="fab fa-twitter-square"></i></a>
+          <a href=""><i class="fab fa-twitter-square"></i></a> -->
           <a href=""><i class="fab fa-github-square"></i></a>
           <a href=""><i class="fab fa-linkedin"></i></a>
         </div>
@@ -31,7 +32,7 @@
       <nav>
         <div class="logo"><i class="fas fa-book"></i>Mi Portafolio</div>
         <div>
-          <a href="#">Sobre Mi</a>
+          <a href="#container__proyectos">Proyectos</a>
         </div>
       </nav>
 
@@ -41,14 +42,66 @@
           <p>Java Full Stack Jr Developer</p>
         </div>
         <!--   <button type="button" class="btn-entrar"> -->
-        <a class="btn-entrar" href="#container__proyectos">Conoceme!</a>
+        <a class="btn-entrar" href="#perfil">¡Conoceme!</a>
         <!--   </button> -->
       </section>
     </header>
+
+    <!-- //////////////////////////////// Section Perfil //////////////////////////// -->
+    <section class="perfil" id="perfil">
+      <h2 class="perfil--titulo">Sobre Mi</h2>
+      <div class="perfil__container">
+        <div class="perfil__container--info grid-container">
+          <img src="./assets/img/perfil-javier.png" alt="" />
+          <div>
+            <h3>Hola!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aut
+              officia ullam voluptatem. Fugit a, ab non aspernatur debitis
+              dolores!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="perfil__container--extrainfo grid-container">
+        <h3>Informacion complementaria</h3>
+        <div class="perfil__container--tecnologias">
+          <h3>Tecnologias</h3>
+            <i class="fab tecnologias fa-js-square" title="JavaScritp"></i>
+              <i class="fab tecnologias fa-html5" title="HTML5"></i>
+              <i class="fab tecnologias fa-css3-alt" title="CSS3"></i>
+              <i class="fab tecnologias fa-java" title="Java"></i>
+              <i class="fas tecnologias fa-database" title="MySQL"></i>
+              <i class="fab tecnologias fa-slack" title="Slack"></i>
+              <i class="fab tecnologias fa-figma" title="Figma"></i>
+              <i class="fab tecnologias fa-trello" title="Trello"></i>
+        </div>
+        <div class="perfil__container--ingles grid-container">
+          <h3>Nivel de Ingles</h3>
+          <p>
+            <i class="fas tecnologias fa-language"></i> TOEFL: B1
+          </p>
+          <a href="./assets/img/ingles-voxy.png" target="_blank">
+            <img src="./assets/img/ingles-voxy.png" alt=""></a>
+          
+        </div>
+        <div class="perfil__container--hobbies">
+          <h3>Hobbies</h3>
+          <ul>
+            <li>Videojuegos <i class="fas tecnologias fa-gamepad"></i></li>
+            <li>Tomar Cafe<i class="fas tecnologias fa-coffee"></i></li>
+            <li>Salir a correr<i class="fas tecnologias fa-running"></i></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!--//////////////////////////////////// SECTION PROYECTOS  ///////////////////////////////////////////////-->
     <main id="container__proyectos" class="container__proyectos">
       <h2>Proyectos</h2>
       <section class="proyectos">
-        <section class="proyectos__ultimo">
+        <section class="proyectos__ultimo grid-container">
           <h3 class="proyectos__ultimo--titulo">Ultimo proyecto</h3>
           <div class="proyectos__ultimo--img">
             <img src="./assets/img/proyecto-ejercicios-basicosJS.png" alt="" />
@@ -77,11 +130,12 @@
             ></a>
           </div>
         </section>
-        </section>
-        <section class="proyectos__carrusel">
-          <h3 class="proyectos__carrusel--titulo">Proyectos anteriores</h3>
-          <div class="proyectos__carrusel--card">
-            <img src="./assets/img/proyecto-maquetacion.png" alt="" />
+      </section>
+      <section class="proyectos__carrusel grid-container">
+        <h3 class="proyectos__carrusel--titulo">Proyectos anteriores</h3>
+        <div class="proyectos__carrusel--card">
+          <img src="./assets/img/proyecto-maquetacion.png" alt="" />
+          <div class="proyectos__carrusel--info">
             <h3>Maquetacion Tienda de Comida</h3>
             <p>
               Tarea de GENERATION Mexico donde se maqueto una pagina de inicio a
@@ -105,8 +159,10 @@
               ></a>
             </div>
           </div>
-          <div class="proyectos__carrusel--card">
-            <img src="./assets/img/proyecto-animaland2.png" alt="" />
+        </div>
+        <div class="proyectos__carrusel--card">
+          <img src="./assets/img/proyecto-animaland2.png" alt="" />
+          <div class="proyectos__carrusel--info">
             <h3>Animaland</h3>
             <p>
               Mini juego realizado principalmente con animaciones y contadores
@@ -130,8 +186,10 @@
               ></a>
             </div>
           </div>
-          <div class="proyectos__carrusel--card">
-            <img src="./assets/img/proyecto-clon-de-google.png" alt="" />
+        </div>
+        <div class="proyectos__carrusel--card">
+          <img src="./assets/img/proyecto-clon-de-google.png" alt="" />
+          <div class="proyectos__carrusel--info">
             <h3>Clon de Google</h3>
             <p>
               Reto de creacion de pagina con la estetica del inicio de
@@ -155,8 +213,10 @@
               ></a>
             </div>
           </div>
-          <div class="proyectos__carrusel--card">
-            <img src="./assets/img/proyecto-tienda-virtual.png" alt="" />
+        </div>
+        <div class="proyectos__carrusel--card">
+          <img src="./assets/img/proyecto-tienda-virtual.png" alt="" />
+          <div class="proyectos__carrusel--info">
             <h3>Tienda Virtual de Javier</h3>
             <p>
               Primer acercamiento a HTML y CSS, se aprendio a maquitar una
@@ -180,8 +240,10 @@
               ></a>
             </div>
           </div>
-          <div class="proyectos__carrusel--card">
-            <img src="./assets/img/proximamente.jpg" alt="" />
+        </div>
+        <div class="proyectos__carrusel--card">
+          <img src="./assets/img/proximamente.jpg" alt="" />
+          <div class="proyectos__carrusel--info">
             <h3>Proximamente...</h3>
             <p>Proximamente...</p>
             <div class="proyectos__carrusel--links">
@@ -199,8 +261,10 @@
               ></a>
             </div>
           </div>
-          <div class="proyectos__carrusel--card">
-            <img src="./assets/img/proximamente.jpg" alt="" />
+        </div>
+        <div class="proyectos__carrusel--card">
+          <img src="./assets/img/proximamente.jpg" alt="" />
+          <div class="proyectos__carrusel--info">
             <h3>Proximamente...</h3>
             <p>Proximamente...</p>
             <div class="proyectos__carrusel--links">
@@ -218,8 +282,9 @@
               ></a>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </main>
+    
   </body>
 </html>
