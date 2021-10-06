@@ -1,6 +1,6 @@
 :root{
     --main-color: rgb(0, 241, 201);
-    --second-color: #7a7a7a45;
+    --second-color: #e0e0e0;
 }
 
 html{
@@ -8,7 +8,7 @@ html{
 }
 body{
     font-family: 'Lato', sans-serif;
-}
+    }
 
 .grid-container{
     max-width: 980px;
@@ -152,23 +152,19 @@ Seccion de proyectos
 .proyectos__ultimo{
     display:grid;
     grid-template-columns: 2fr 1fr;   
-    grid-template-areas:
-        'titulo titulo'
-        'img texto';
     padding: 1rem 3rem;
     align-items: center;
     column-gap: 1rem;
 }
 
 .proyectos__ultimo--titulo{
-    grid-area: titulo;
+    grid-column: 1/4;
     margin-block-start: 0;
 }
 
 .proyectos__ultimo--img img{
     width: 85%;
     object-fit:cover;
-    transition: 450ms all;
 }
 
 
@@ -205,6 +201,7 @@ Seccion de proyectos
     color:white;
 
 }
+
 .button--active{
     color:var(--main-color);
     font-weight: bold;
@@ -220,6 +217,10 @@ Seccion de proyectos
     pointer-events: none;
     cursor:default;
 
+}
+
+.proyectos--actualRepo:hover{
+    border-color: rgba(0, 0, 0, 0.274);
 }
 
 /* Carrusel de proyectos */
@@ -279,10 +280,23 @@ Seccion de perfil
     margin-top: 3rem;
 }
 
-.perfil__container--info img{
+.perfil__container--imgfondo{
+    grid-column: 1 / 2;
     background-color: var(--main-color);
     border-radius: 50%;
     height: 15rem;
+    grid-row: 1 / 2;
+    transform:rotateX(-37deg) translateX(0px) translateY(29px);
+}
+
+.perfil__container--info img{
+    /* background-color: var(--main-color);
+    border-radius: 50%; */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .perfil__container--extrainfo{
@@ -315,6 +329,11 @@ Seccion de perfil
     justify-content: space-evenly;
 }
 
+.perfil__container--hobbies{
+    display: grid;
+    justify-content: center;
+}
+
 .perfil__container--ingles img{
     width: 100%;
 }
@@ -326,9 +345,4 @@ Seccion de perfil
 .perfil__container--hobbies ul{
     list-style: none;
     padding-inline-start: 0;
-}
-
-.perfil__container--hobbies ul li{
-    margin-block-end: 1rem;
-    font-size: 1.2rem;
 }

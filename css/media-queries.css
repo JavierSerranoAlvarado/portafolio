@@ -1,0 +1,56 @@
+@media (max-width:940px) and (min-width: 768px){
+    .proyectos--button{
+        padding: 0.3rem 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px){
+    nav{
+        grid-template-columns: 1fr;
+    height: auto;
+    }
+
+    .perfil__container--extrainfo{
+        grid-template-columns: 1fr;
+        gap:0;
+        
+    }
+
+    .perfil__container--ingles img {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .perfil--responsive{
+        grid-column: 1/2;
+        row-gap: 1rem;
+        margin-block-end: 1rem;
+    }
+
+    .perfil__container--hobbies {
+        row-gap: 0;
+    }
+
+    .proyectos__ultimo {
+        grid-template-columns: 1fr;
+    }
+
+    .proyectos__ultimo--titulo {
+        grid-column: 1 / 2;
+    }
+
+    .proyectos__ultimo--img img {
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .proyectos__carrusel{
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+    .proyectos__carrusel--card{
+        grid-column: 1 / 2;
+    }
+}
