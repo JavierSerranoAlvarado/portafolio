@@ -11,6 +11,36 @@
     height: auto;
     }
 
+    nav .logo {
+        font-size: 1.5rem;
+    }
+
+    nav div:nth-child(2n) a {
+        font-size: 1rem;
+    }
+
+    .intro{
+        font-size: 1.5rem;
+    }
+
+    .intro--text p:nth-child(1) {
+        font-size: 2rem;
+    }
+    .perfil__container--info{
+        gap: 0;
+        grid-template-columns: 1fr;
+        padding: 0 3rem;
+    }
+
+    .perfil__container--imgfondo{
+        width: 80%;
+    justify-self: center;
+    }
+
+    .perfil__container--info img{
+        justify-self: center;
+    }
+
     .perfil__container--extrainfo{
         grid-template-columns: 1fr;
         gap:0;
@@ -33,6 +63,16 @@
         row-gap: 0;
     }
 
+    .perfil__container--hobbies ul li{
+        margin-block-end: 0;
+    }
+
+    .proyectos--button {
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
     .proyectos__ultimo {
         grid-template-columns: 1fr;
     }
@@ -46,11 +86,45 @@
         display: flex;
     }
 
+    .proyectos__ultimo--text a{
+        text-align: center;
+        display: flex;
+        margin: 0.5rem auto;
+        justify-content: center;
+    }
+
     .proyectos__carrusel{
         grid-template-columns: 1fr;
         column-gap: 0;
+        padding: 0;
     }
     .proyectos__carrusel--card{
         grid-column: 1 / 2;
+        margin: 0 3rem;
     }
+
+    .proyectos__carrusel--links{
+        display:grid;
+        justify-content: center;
+    }
+
+    .contacto__container--info {
+        align-items: center;
+        grid-template-columns: auto auto;
+        column-gap: 1rem;
+        grid-template-rows: auto auto;
+    }
+
+    .contacto__container--info i {
+        grid-row: 2 / 3;
+        margin: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .contacto__container--info h3{
+        text-align: center;
+    }
+
+
 }
