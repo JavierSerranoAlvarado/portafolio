@@ -3,6 +3,22 @@
     --second-color: #e0e0e0;
 }
 
+body::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: #eff1f5;
+  }
+
+body::-webkit-scrollbar-track{
+    border-radius: 3px;
+    background-color: var(--second-color);
+  }
+  
+body::-webkit-scrollbar-thumb{
+    border-radius:5px;
+    background-color:var(--main-color);
+    /* border:2px solid #c0c7d4 */
+  }
+
 html{
     scroll-behavior: smooth;
 }
@@ -76,7 +92,11 @@ nav .logo{
     font-weight: bold;
     display:flex;
     align-items: center;
-    text-transform: uppercase;
+}
+
+nav span:nth-child(3){
+    margin-inline-start:0.5rem ;
+    color:var(--main-color)
 }
 
 nav .logo i{
@@ -111,11 +131,13 @@ nav div:nth-child(2n) a:hover{
     text-align: center;
 }
 
-.intro--text p:nth-child(1){
+.intro--text .intro--nombre{
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
+    color: var(--second-color);
 }
+
 
 
 .intro .btn-entrar{
@@ -285,6 +307,7 @@ Seccion de perfil
     margin-top: 3rem;
 }
 
+
 .perfil__container--imgfondo{
     grid-column: 1 / 2;
     background-color: var(--main-color);
@@ -302,6 +325,11 @@ Seccion de perfil
     height: 15rem;
     border-radius: 50%;
     z-index: 1;
+}
+
+.perfil__container--info h1{
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 
 .perfil__container--extrainfo{

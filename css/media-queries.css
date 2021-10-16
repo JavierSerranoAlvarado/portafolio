@@ -9,6 +9,7 @@
     nav{
         grid-template-columns: 1fr;
     height: auto;
+    padding-inline: 2rem;
     }
 
     nav .logo {
