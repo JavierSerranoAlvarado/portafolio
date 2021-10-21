@@ -429,6 +429,25 @@ Contacto
     color: white;
 }
 
+.contacto--img{
+    height: 1.8rem;
+    z-index: 1;
+}
+
+.contacto--img::before{
+    z-index: 10;
+    content: "";
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+}
+
+.contacto--correo::after{
+    margin-block-start: 0;
+    font-size: 1.5rem;
+    content: "contacto@javiersadev.com";
+}
+
 
 
 
