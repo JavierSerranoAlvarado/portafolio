@@ -211,6 +211,9 @@ Seccion de proyectos
 .fa-js-square{color : #ed7e31;}
 .fa-html5{color: #d94824}
 .fa-css3-alt{color: #01a7dd}
+.fa-css3-alt{color: #01a7dd}
+.fa-java{color: #b07219}
+.fa-bootstrap{color: #563d7c}
 
 .proyectos--button{
     border:1px solid black;
@@ -456,4 +459,22 @@ footer{
 
 footer span{
     color: red;
+}
+
+/* ///////////////////////////////////////////////////////////
+Pag CV
+////////////////////////////////////////////////////////////////////// */
+
+#changeCV{
+    background-color: white;
+    border-color: var(--main-color);
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#changeCV:hover{
+    background-color: var(--main-color);
+    color: white;
+    border-color: white;
 }
