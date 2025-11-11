@@ -1,0 +1,126 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body { margin: 0; }
+
+.grid-container { max-width: none; width: 100%; padding-left: 1rem; padding-right: 1rem; }
+
+
+#header { padding-block: 1rem; }
+.intro { min-height: auto; padding: 2rem 0; }
+.intro--nombre { font-size: clamp(1rem, 2.5vw, 1.25rem); margin-bottom: .25rem; }
+.intro--titulo { font-size: clamp(1.25rem, 4vw, 2rem); line-height: 1.2; margin: 0; }
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.lang-switch .form-check-input { cursor: pointer; }
+.lang-switch-sm .form-check-input { transform: scale(0.9); }
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.floating_button {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  min-width: 56px;           
+  height: 56px;
+  padding: 0 16px;            
+  border-radius: 999px;       
+  background: var(--bs-primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  z-index: 1050;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  animation: fab-bounce 2.2s ease-in-out infinite;
+  white-space: nowrap;
+}
+.floating_button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,.22);
+  background: var(--bs-primary);
+  color: #fff;
+}
+.floating_button i { font-size: 1.25rem; }
+
+
+.fab-label {
+  max-width: 0;
+  opacity: 0;
+  margin-left: 0;
+  overflow: hidden;
+  transition: max-width .25s ease, opacity .2s ease, margin-left .2s ease;
+}
+.floating_button:hover .fab-label {
+  max-width: 120px;
+  opacity: 1;
+  margin-left: .5rem;
+}
+
+@keyframes fab-bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+  60% { transform: translateY(-3px); }
+}
+
