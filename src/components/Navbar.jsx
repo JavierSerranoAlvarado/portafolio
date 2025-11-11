@@ -22,8 +22,8 @@ export default function Navbar() {
             <li className="nav-item"><NavLink className="nav-link" to="/">{t('nav.home')}</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/about">{t('nav.about')}</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/cv">{t('nav.cv')}</NavLink></li>
-            <li className="nav-item"><a className="nav-link" href="#container__proyectos">{t('nav.projects')}</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contacto">{t('nav.contact')}</a></li>
+            <li className="nav-item"><NavLink className="nav-link" to="/" state={{ scrollTo: 'container__proyectos' }}>{t('nav.projects')}</NavLink></li>
+            <li className="nav-item"><NavLink className="nav-link" to="/" state={{ scrollTo: 'contacto' }}>{t('nav.contact')}</NavLink></li>
             <li className="nav-item ms-3 d-flex align-items-center">
               <button className="btn btn-sm btn-outline-secondary" onClick={toggleLang}>
                 {isEn ? 'ES' : 'EN'}

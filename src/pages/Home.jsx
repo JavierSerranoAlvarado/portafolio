@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
 
 export default function Home() {
    const { t } = useTranslation()
@@ -33,7 +34,7 @@ export default function Home() {
       <p className="intro--nombre">{t('home.heroName')}</p>
       <div className="intro--titulo">{t('home.heroTitle')}</div>
     </div>
-    <a className="btn-entrar" href="#perfil">{t('home.knowMe')}</a>
+    <NavLink className="btn-entrar" to="/" state={{ scrollTo: 'perfil' }}>{t('home.knowMe')}</NavLink>
   </section>
 </header>
 
@@ -49,9 +50,9 @@ export default function Home() {
           {t('profile.bio')}
           <br />
         </h1>
-        <a href="/cv" className="proyectos--button button--active" target="_self" rel="noreferrer">
+        <NavLink to="/cv" className="proyectos--button button--active">
           {t('profile.downloadCv')}
-        </a>
+        </NavLink>
       </div>
     </div>
   </div>

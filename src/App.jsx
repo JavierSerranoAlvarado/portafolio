@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -7,11 +8,29 @@ import Cv from './pages/Cv.jsx'
 import Fab from './components/Fab.jsx'
 
 
+function ScrollToHash() {
+  const location = useLocation()
+  const { pathname, hash, state } = location
+  useEffect(() => {
+    const targetId = (state && state.scrollTo) || (hash ? hash.replace('#', '') : null)
+    if (targetId) {
+      const el = document.getElementById(targetId)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    } else {
+      window.scrollTo({ top: 0 })
+    }
+  }, [pathname, hash, state])
+  return null
+}
+
 export default function App() {
   return (
     <>
       <Navbar />
       <main className="container-fluid py-5">
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
