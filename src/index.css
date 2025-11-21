@@ -27,10 +27,10 @@ body { margin: 0; }
 .grid-container { max-width: none; width: 100%; padding-left: 1rem; padding-right: 1rem; }
 
 
-#header { padding-block: 1rem; }
 .intro { min-height: auto; padding: 2rem 0; }
 .intro--nombre { font-size: clamp(1rem, 2.5vw, 1.25rem); margin-bottom: .25rem; }
 .intro--titulo { font-size: clamp(1.25rem, 4vw, 2rem); line-height: 1.2; margin: 0; }
+.intro--meta { margin-top: .5rem; color: white; font-size: .95rem; }
 
 
 h1 {
@@ -124,3 +124,11 @@ button:focus-visible {
   60% { transform: translateY(-3px); }
 }
 
+/* Chips (skill tags) */
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.chips h3 {  flex: 1 1 100%;  max-width: 100%;  text-align: center;    margin: 0;  font-size: 2rem; align-self: baseline;}
+.chip { padding: .35rem .6rem; border-radius: 999px; background: hsla(var(--hue-primary), var(--sat-primary), 12%, 0.6); color: inherit; font-size: .9rem; border: 1px solid rgba(108,117,125,.25); }
+
+/* Portfolio images hover */
+.proyectos img { border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.12); transition: transform .2s ease, box-shadow .2s ease; }
+.proyectos img:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.18); }

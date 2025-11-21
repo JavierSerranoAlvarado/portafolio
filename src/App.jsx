@@ -29,7 +29,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <main className="container-fluid py-5">
+      <main className="">
         <ScrollToHash />
         <Routes>
           <Route path="/" element={<Home />} />

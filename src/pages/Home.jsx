@@ -6,8 +6,14 @@ export default function Home() {
  
   return (
     <>
+    <div class="stars"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
      
-      <header id="header"> 
+      <header id="header" class="mt-5"> 
       {/* 
   <section className="socialMedia">
     <div className="socialMedia__list">
@@ -33,17 +39,30 @@ export default function Home() {
     <div className="intro--text">
       <p className="intro--nombre">{t('home.heroName')}</p>
       <div className="intro--titulo">{t('home.heroTitle')}</div>
+      <div className="intro--meta">
+        <p className="mb-1">{t('home.heroState')} <a href="mailto:contacto@javiersadev.com">contacto@javiersadev.com</a></p>
+        <p className="mb-0">
+          <a href="https://javiersadev.com" target="_blank" rel="noreferrer">javiersadev.com</a>
+          {' '}·{' '}
+          <a href="https://www.linkedin.com/in/javiersadev/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+      </div>
     </div>
-    <NavLink className="btn-entrar" to="/" state={{ scrollTo: 'perfil' }}>{t('home.knowMe')}</NavLink>
+    {/*
+    <div className="d-flex gap-2 mt-3">
+      <NavLink className="btn btn-primary" to="/cv">Ver CV</NavLink>
+      <NavLink className="btn btn-outline-secondary" to="/" state={{ scrollTo: 'contacto' }}>Contacto</NavLink>
+    </div>
+    */}
   </section>
 </header>
 
-<section className="perfil" id="perfil">
-  <h2 className="perfil--titulo">{t('profile.sectionTitle')}</h2>
+<section className="perfil pt-4" id="perfil">
+  <h2 className="experiencia__titulo">{t('profile.sectionTitle')}</h2>
   <div className="perfil__container">
-    <div className="perfil__container--info grid-container">
+    <div className="perfil__container--info grid-container mt-3">
       <div className="perfil__container--imgfondo"></div>
-      <img src="/assets/img/perfil-javier.png" alt={t('profile.imgAlt')} />
+      <img loading="lazy" src="/assets/img/perfil-javier.png" alt={t('profile.imgAlt')} />
       <div>
         <h3>{t('profile.hello')}</h3>
         <h1>
@@ -56,21 +75,50 @@ export default function Home() {
       </div>
     </div>
   </div>
+   <section className="perfil__experiencia perfil--responsive" id="experiencia">
+    <h3 className="experiencia__titulo">{t('experience.sectionTitle')}</h3>
+    
+    <div className="experiencia__item">
+        <h4 className="experiencia__subtitulo">1. {t('experience.item1Title')}</h4>
+        <p><strong>Rol Clave:</strong> {t('experience.item1Role')}</p>
+        <p><strong>Alcance:</strong> {t('experience.item1Scope')}</p>
+        <p><strong>Logros Técnicos:</strong> {t('experience.item1Achievements')}</p>
+        <p><strong>Enfoque de Calidad:</strong> {t('experience.item1QualityFocus')}</p>
+    </div>
 
+    <div className="experiencia__item">
+        <h4 className="experiencia__subtitulo">2. {t('experience.item2Title')}</h4>
+        <p><strong>Rol Clave:</strong> {t('experience.item2Role')}</p>
+        <p><strong>Logros Técnicos:</strong> {t('experience.item2Achievements')}</p>
+        <p><strong>Proceso:</strong> {t('experience.item2Process')}</p>
+    </div>
+
+    <div className="experiencia__item">
+        <h4 className="experiencia__subtitulo">3. {t('experience.item3Title')}</h4>
+        <p><strong>Rol Clave:</strong> {t('experience.item3Role')}</p>
+        <p><strong>Alcance:</strong> {t('experience.item3Scope')}</p>
+        <p><strong>Tecnologías:</strong> {t('experience.item3Tech')}</p>
+    </div>
+</section>
   <div className="perfil__container--extrainfo grid-container">
-    <h3 className="proyectos__carrusel--titulo">{t('profile.infoTitle')}</h3>
-
-    <div className="perfil__container--tecnologias perfil--responsive">
+    <h3 className="proyectos__carrusel--titulo experiencia__titulo">{t('profile.infoTitle')}</h3>
+    <div className="chips">
       <h3>{t('profile.technologies.title')}</h3>
-      <i className="fab tecnologias fa-js-square" title={t('profile.technologies.list.javascript')}></i>
-      <i className="fab tecnologias fa-html5" title={t('profile.technologies.list.html5')}></i>
-      <i className="fab tecnologias fa-css3-alt" title={t('profile.technologies.list.css3')}></i>
-      <i className="fab tecnologias fa-bootstrap" title={t('profile.technologies.list.bootstrap')}></i>
-      <i className="fab tecnologias fa-java" title={t('profile.technologies.list.java')}></i>
-      <i className="fas tecnologias fa-database" title={t('profile.technologies.list.mysql')}></i>
-      <i className="fab tecnologias fa-slack" title={t('profile.technologies.list.slack')}></i>
-      <i className="fab tecnologias fa-figma" title={t('profile.technologies.list.figma')}></i>
-      <i className="fab tecnologias fa-trello" title={t('profile.technologies.list.trello')}></i>
+      <span className="chip">React</span>
+      <span className="chip">AEM</span>
+      <span className="chip">Sling Models</span>
+      <span className="chip">OSGi</span>
+      <span className="chip">HTL/Sightly</span>
+      <span className="chip">Core Components</span>
+      <span className="chip">Servlets</span>
+      <span className="chip">APIs</span>
+      <span className="chip">Workflows</span>
+      <span className="chip">NVDA</span>
+      <span className="chip">Responsive</span>
+      <span className="chip">Java</span>
+      <span className="chip">Spring Boot</span>
+      <span className="chip">MySQL</span>
+      <span className="chip">REST</span>
     </div>
 
     <div className="perfil__container--ingles perfil--responsive">
@@ -79,7 +127,7 @@ export default function Home() {
         <i className="fas tecnologias fa-language"></i> {t('profile.englishLevel.score')}
       </p>
       <a href="/assets/img/ingles-voxy.png" target="_blank" rel="noreferrer">
-        <img src="/assets/img/ingles-voxy.png" alt={t('profile.englishLevel.certAlt')} />
+        <img loading="lazy" src="/assets/img/ingles-voxy.png" alt={t('profile.englishLevel.certAlt')} />
       </a>
     </div>
 
@@ -95,13 +143,12 @@ export default function Home() {
 </section>
 
 <main id="container__proyectos" className="container__proyectos">
-  <h2>{t('projects.title')}</h2>
 
   <section className="proyectos">
     <section className="proyectos__ultimo grid-container">
       <h3 className="proyectos__ultimo--titulo">{t('projects.latestTitle')}</h3>
       <div className="proyectos__ultimo--img">
-        <img src="/assets/img/easteregg.png" alt={t('projects.latestImgAlt')} />
+        <img loading="lazy" src="/assets/img/easteregg.png" alt={t('projects.latestImgAlt')} />
       </div>
       <div className="proyectos__ultimo--text">
         <h3>{t('projects.latestName')}</h3>
@@ -127,7 +174,7 @@ export default function Home() {
     <h3 className="proyectos__carrusel--titulo">{t('projects.previousTitle')}</h3>
 
     <div className="proyectos__carrusel--card">
-      <img src="/assets/img/proyecto-ejercicios-basicosJS.png" alt={t('projects.cards.basicJs.imgAlt')} />
+        <img loading="lazy" src="/assets/img/proyecto-ejercicios-basicosJS.png" alt={t('projects.cards.basicJs.imgAlt')} />
       <div className="proyectos__carrusel--info">
         <h3>{t('projects.cards.basicJs.title')}</h3>
         <p>
@@ -150,7 +197,7 @@ export default function Home() {
     </div>
 
     <div className="proyectos__carrusel--card">
-      <img src="/assets/img/proyecto-maquetacion.png" alt={t('projects.cards.foodStore.imgAlt')} />
+        <img loading="lazy" src="/assets/img/proyecto-maquetacion.png" alt={t('projects.cards.foodStore.imgAlt')} />
       <div className="proyectos__carrusel--info">
         <h3>{t('projects.cards.foodStore.title')}</h3>
         <p>
@@ -172,7 +219,7 @@ export default function Home() {
     </div>
 
     <div className="proyectos__carrusel--card">
-      <img src="/assets/img/proyecto-animaland2.png" alt={t('projects.cards.animaland.imgAlt')} />
+        <img loading="lazy" src="/assets/img/proyecto-animaland2.png" alt={t('projects.cards.animaland.imgAlt')} />
       <div className="proyectos__carrusel--info">
         <h3>{t('projects.cards.animaland.title')}</h3>
         <p>
@@ -194,7 +241,7 @@ export default function Home() {
     </div>
 
     <div className="proyectos__carrusel--card">
-      <img src="/assets/img/proyecto-clon-de-google.png" alt={t('projects.cards.googleClone.imgAlt')} />
+        <img loading="lazy" src="/assets/img/proyecto-clon-de-google.png" alt={t('projects.cards.googleClone.imgAlt')} />
       <div className="proyectos__carrusel--info">
         <h3>{t('projects.cards.googleClone.title')}</h3>
         <p>
@@ -216,7 +263,7 @@ export default function Home() {
     </div>
 
     <div className="proyectos__carrusel--card">
-      <img src="/assets/img/proyecto-tienda-virtual.png" alt={t('projects.cards.javierStore.imgAlt')} />
+        <img loading="lazy" src="/assets/img/proyecto-tienda-virtual.png" alt={t('projects.cards.javierStore.imgAlt')} />
       <div className="proyectos__carrusel--info">
         <h3>{t('projects.cards.javierStore.title')}</h3>
         <p>
@@ -238,7 +285,7 @@ export default function Home() {
     </div>
 
     <div className="proyectos__carrusel--card">
-      <img src="/assets/img/proximamente.jpg" alt={t('projects.cards.comingSoon.imgAlt')} />
+        <img loading="lazy" src="/assets/img/proximamente.jpg" alt={t('projects.cards.comingSoon.imgAlt')} />
       <div className="proyectos__carrusel--info">
         <h3>{t('projects.cards.comingSoon.title')}</h3>
         <p>{t('projects.cards.comingSoon.desc')}</p>
@@ -256,11 +303,11 @@ export default function Home() {
 </main>
 
 <section className="contacto" id="contacto">
-  <h2>{t('contact.title')}</h2>
+  <h2 class="experiencia__titulo">{t('contact.title')}</h2>
   <div className="contacto__container">
     <div className="contacto__container--info grid-container">
       <i className="fas fa-envelope-open-text"></i>
-      <h3>{t('contact.sendMeEmail')}</h3>
+      <h3 className="experiencia__subtitulo">{t('contact.sendMeEmail')}</h3>
       <p>{t('contact.text')}</p>
       <img className="contacto--img" src="/assets/img/correo.png" alt={t('contact.mailImgAlt')} />
     </div>
