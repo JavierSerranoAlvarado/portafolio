@@ -354,9 +354,9 @@ const resources = {
         by: 'by Javier Eduardo'
       },
 
-      about: {
-        title: 'About',
-        content: 'Example section.'
+          about: {
+        title: 'About me',
+        content: "I'm Javi, a frontend developer focused on creating clear, efficient, user-centered interfaces. I work primarily with JavaScript, React, Bootstrap, and AEM. I'm passionate about learning, improving processes, and building solutions that combine technical expertise and creativity. Outside of coding, I enjoy art, anime, and technology that inspires new ideas."
       }
     }
   }
