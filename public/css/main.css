@@ -1,23 +1,46 @@
-:root{
-    --main-color: rgb(0, 241, 201);
-    --second-color: #e0e0e0;
+:root {
+  --main-color: rgb(0, 241, 201);
+  --second-color: #e0e0e0;
+  --hue-primary: 222;   
+  --sat-primary: 47%;
+  --hue-accent: 200;    
+  --sat-accent: 80%;
+  --hue-text: 220;
+  --sat-text: 30%;
+
+
+  --bg-color-lightness: 5%; 
+  --background: hsl(var(--hue-primary), var(--sat-primary), var(--bg-color-lightness));
+  
+
+  --surface-color-lightness: 10%; 
+  --surface: hsl(var(--hue-primary), var(--sat-primary), var(--surface-color-lightness));
+
+  --text-title-color-lightness: 95%; 
+  --text-title: hsl(var(--hue-text), 40%, var(--text-title-color-lightness)); 
+  
+
+  --text-primary-color-lightness: 80%; 
+  --text-primary: hsl(var(--hue-text), var(--sat-text), var(--text-primary-color-lightness));
+
+  --accent-color-lightness: 50%; 
+  --accent-primary: hsl(var(--hue-accent), var(--sat-accent), var(--accent-color-lightness));
+
+  --accent-light-color: 65%; 
+  --accent-secondary: hsl(var(--hue-accent), var(--sat-accent), var(--accent-light-color));
 }
 
-body::-webkit-scrollbar {
-    width: 0.8rem;
-    background-color: #eff1f5;
-  }
+h1, h2, h3, h4 {
+    color: var(--text-title);
+}
 
-body::-webkit-scrollbar-track{
-    border-radius: 3px;
-    background-color: var(--second-color);
-  }
-  
-body::-webkit-scrollbar-thumb{
-    border-radius:5px;
-    background-color:var(--main-color);
-    /* border:2px solid #c0c7d4 */
-  }
+.header-menu {
+    background-color: hsl(var(--surface) / 0.8);
+    backdrop-filter: blur(8px); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 html{
     scroll-behavior: smooth;
@@ -47,7 +70,7 @@ header{
 
 header a{
     text-decoration: none;
-    color:black;
+    color: white;
 }
 
 /* Barra de redes sociales */
@@ -57,7 +80,11 @@ header a{
     justify-content: flex-end;
     align-items: center;
     height:3rem;
-    background: var(--main-color);
+    background-color: var(--surface);
+}
+
+.socialMedia .container-fluid{
+    background-color: var(--surface);
 }
 
 .socialMedia__list a{
@@ -68,13 +95,13 @@ header a{
 
 .socialMedia__list a i {
     margin-inline: 1rem;
-    color:white;
+    color: var(--text-primary);
     transition:450ms all;
 }
 
 .socialMedia__list a i:hover {
     transform: rotateY(360deg);
-    color:black;
+    color:var(--accent-secondary);
 }
 
 
@@ -117,25 +144,25 @@ nav div:nth-child(2n) a{
 
 nav div:nth-child(2n) a:hover{
     color:var(--main-color);
-    border-bottom: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--accent-secondary);;
 }
 
 .intro{
-    background-image:url(../assets/img/cover3.jpg);
-    background-size: cover;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
     font-size:2rem;
     color: white;
     text-align: center;
 }
 
+
+
 .intro--text .intro--nombre{
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
-    color: var(--second-color);
+    color: var(--accent-primary);
 }
 
 
@@ -172,9 +199,6 @@ Seccion de proyectos
     width:100%;
 }
 
-.container__proyectos .proyectos{
-    background-color: var(--second-color);
-}
 
 .proyectos__ultimo{
     display:grid;
@@ -220,7 +244,7 @@ Seccion de proyectos
     padding:0.5rem 1rem;
     width: 10rem;
     font-size: 1.2rem;
-    color:black;
+    color: var(--accent-secondary);
     text-decoration: none;
     transition:150ms all;
 }
@@ -233,13 +257,14 @@ Seccion de proyectos
 }
 
 .button--active{
-    color:var(--main-color);
+   background-color: var(--accent-primary);
     font-weight: bold;
-    border-color: var(--main-color);
+    color:var(--accent-color);
+    border-color: var(--second-color);
 }
 .button--active:hover{
     color:black;
-    background-color: var(--main-color);
+    background-color: var(--accent-secondary);
 }
 .button--disable{
     color:var(--second-color);
@@ -297,10 +322,6 @@ Seccion de perfil
     margin-inline-start: 3rem;
 }
 
-.perfil__container{
-    background-color: var(--second-color);
-}
-
 .perfil__container--info{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -308,12 +329,15 @@ Seccion de perfil
     gap: 1rem;
     padding: 2rem 0;
     margin-top: 3rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
 
 
 .perfil__container--imgfondo{
     grid-column: 1 / 2;
-    background-color: var(--main-color);
+    background-color: var(--accent-primary);
     border-radius: 50%;
     height: 15rem;
     grid-row: 1 / 2;
@@ -399,9 +423,6 @@ Contacto
     width: 100%;
 }
 
-.contacto__container{
-    background-color: var(--second-color);
-}
 
 .contacto__container--info{
     padding: 1rem 0;
@@ -477,4 +498,177 @@ Pag CV
     background-color: var(--main-color);
     color: white;
     border-color: white;
+}
+
+/*//////////////////////////
+ Starry Night Sky with Shooting Stars CSS 
+ //////////////////////////////*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  
+}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background: white;
+  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
+    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
+    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
+    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
+    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
+    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
+    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
+    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
+    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
+    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+    95vw 75vh 2px white;
+  animation: twinkle 8s infinite linear;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  animation: shoot 3s infinite ease-in;
+}
+
+.shooting-star:nth-child(1) {
+  top: 20%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+  top: 35%;
+  left: -100px;
+  animation-delay: 1s;
+}
+
+.shooting-star:nth-child(3) {
+  top: 50%;
+  left: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* Additional twinkling stars with different animation timing */
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
+    57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
+    81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
+    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
+    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
+    51vw 92vh 2px white, 59vw 78vh 1px white;
+  animation: twinkle 6s infinite linear reverse;
+}
+
+/* --- ESTILOS GENERALES DEL CONTENEDOR DE EXPERIENCIA --- */
+.perfil__experiencia {
+    padding: 30px; 
+    margin: 30px auto; 
+}
+
+/* --- ESTILO DEL TÍTULO PRINCIPAL DE LA SECCIÓN --- */
+.experiencia__titulo {
+    color: var(--text-title); 
+    font-size: 2.2em; 
+    text-align: center; 
+    margin-bottom: 40px; 
+    background: linear-gradient(90deg, 
+                hsl(var(--hue-text), 40%, 95%) 0%, 
+                hsl(var(--hue-accent), var(--sat-accent), 70%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* --- ESTILOS PARA CADA ITEM DE EXPERIENCIA --- */
+.experiencia__item {
+    background-color: hsla(var(--hue-primary), var(--sat-primary), 12%, 0.6); 
+    border-left: 4px solid var(--accent-primary); 
+    margin-bottom: 30px;
+    border-radius: 8px; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.experiencia__item:last-child {
+    margin-bottom: 0; 
+}
+
+/* --- ESTILO DE LOS SUBTÍTULOS DE CADA EXPERIENCIA --- */
+.experiencia__subtitulo {
+    color: var(--accent-secondary); 
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsla(var(--hue-primary), var(--sat-primary), 20%, 0.4); 
+}
+
+/* --- ESTILO DE LOS PÁRRAFOS Y TEXTO NORMAL --- */
+.experiencia__item p {
+    color: var(--text-primary); 
+    line-height: 1.7; 
+    margin-bottom: 10px;
+}
+
+
+.experiencia__item p strong {
+    color: var(--text-title); 
+    font-weight: 600; 
+}
+
+
+@media (max-width: 768px) {
+    .perfil__experiencia {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    .experiencia__titulo {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .experiencia__subtitulo {
+        font-size: 1.2em;
+    }
 }

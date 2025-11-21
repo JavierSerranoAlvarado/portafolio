@@ -13,13 +13,15 @@ const resources = {
         about: 'Acerca',
         cv: 'CV',
         projects: 'Proyectos',
+        experience: 'Experiencia',
         contact: 'Contacto'
       },
 
       home: {
         heroName: 'Javier Eduardo Serrano Alvarado',
-        heroTitle: 'Desarrollador AEM/Full Stack Java',
-        knowMe: 'Conóceme'
+        heroTitle: 'Desarrollador Frontend React + AEM',
+        heroState: 'Estado de México ·',
+        knowMe: 'Conoceme'
       },
 
       cv: {
@@ -50,7 +52,7 @@ const resources = {
         sectionTitle: '¿Quién soy?',
         imgAlt: 'Perfil de Javier',
         hello: 'Hola',
-        bio: 'Soy Javier Eduardo, actual estudiante de desarrollo de software y programador autodidacta. Mi misión es usar las tecnologías como un medio para conectar más a la gente. Mi visión es crear emociones en las personas al momento que vean lo que he hecho usando mis habilidades web. Entusiasta geek y fan de la cultura asiática.',
+        bio: 'Frontend Developer con experiencia practica en React y Adobe AEM, contribuyendo a proyectos empresariales (Verizon). Experto en componentes reutilizables, integraciones React-AEM, creacion de servlets, diseno de APIs, automatizacion de workflows y mejoras de accesibilidad. Experiencia en entornos agiles, depuracion de UI compleja y entrega de soluciones responsivas, escalables y de alto rendimiento.',
         downloadCv: 'Descargar CV',
         infoTitle: 'Información',
 
@@ -84,7 +86,7 @@ const resources = {
       },
 
       projects: {
-        title: 'Proyectos',
+        title: 'Portafolio',
         latestTitle: 'Último proyecto',
         latestImgAlt: 'Easter Egg portada',
         latestName: 'Easter Egg (Proyecto final)',
@@ -141,11 +143,30 @@ const resources = {
         }
       },
 
+      experience: {
+        sectionTitle: 'Experiencia Profesional',
+        item1Title: 'Implementación de Soluciones SPA con React y AEM (2024–2025)',
+        item1Role: 'Desarrollador React',
+        item1Scope: 'Implementación de requerimientos frontend en React con backend gestionado por Adobe AEM.',
+        item1Achievements: 'Desarrollo de componentes React reutilizables para alta interactividad. Creación de servlets y APIs para AEM para el renderizado dinámico de datos en los componentes React.',
+        item1QualityFocus: 'Aseguramiento de la integración fluida React/AEM y resolución de problemas de accesibilidad y visualización cross-browser.',
+
+        item2Title: 'Desarrollo Backend y Flujos de Trabajo en AEM (2023–2024)',
+        item2Role: 'Desarrollador AEM',
+        item2Achievements: 'Creación de flujos de trabajo para automatizar procesos y desarrollo de servlets para obtener y gestionar datos del repositorio de AEM.',
+        item2Process: 'Trabajo bajo el modelo ágil, implementando historias de usuario y mejoras de componentes core según requerimientos.',
+
+        item3Title: 'Proyecto Full Stack: Easter Egg (Generation México, 2021-2022)',
+        item3Role: 'Desarrollador Java',
+        item3Scope: 'Diseño de concepto original y mockup con foco en la interfaz y experiencia de usuario (UX/UI).',
+        item3Tech: 'Backend con Spring Boot para el manejo eficiente de datos e integración, y Frontend con Bootstrap para una experiencia moderna.'
+      },
+
       contact: {
         title: 'Contáctame',
         sendMeEmail: 'Envíame un correo',
         text:
-          'Actualmente estoy buscando nuevas oportunidades. Ya sea que tengas una pregunta o simplemente quiera saludar, ¡haré todo lo posible por responderle!',
+          'Actualmente estoy abierto a nuevas oportunidades de desarrollo AEM y Full Stack Java. Ya sea para discutir un proyecto, colaborar, o simplemente saludar, ¡escríbame!',
         mailImgAlt: 'Correo'
       },
 
@@ -155,8 +176,8 @@ const resources = {
       },
 
       about: {
-        title: 'Acerca',
-        content: 'Sección de ejemplo.'
+        title: 'Acerca de mí',
+        content: 'Soy Javi, desarrollador frontend con enfoque en crear interfaces claras, eficientes y pensadas para el usuario. Trabajo principalmente con JavaScript, React, Bootstrap y AEM. Me apasiona aprender, mejorar procesos y construir soluciones que combinen técnica y creatividad. Fuera del código, disfruto del arte, el anime y la tecnología que inspira nuevas ideas.'
       }
     }
   },
@@ -170,12 +191,14 @@ const resources = {
         about: 'About',
         cv: 'CV',
         projects: 'Projects',
+        experience: 'Experience',
         contact: 'Contact'
       },
 
       home: {
         heroName: 'Javier Eduardo Serrano Alvarado',
-        heroTitle: 'AEM/Full Stack Java Developer',
+        heroTitle: 'React + AEM Frontend Developer',
+        heroState: 'State of Mexico ·',
         knowMe: 'Know me'
       },
 
@@ -207,7 +230,7 @@ const resources = {
         sectionTitle: 'Who am I?',
         imgAlt: 'Javier’s profile',
         hello: 'Hello',
-        bio: 'I am Javier Eduardo, a current software development student and self-taught programmer. My mission is to use technology as a means to connect people. My vision is to spark emotions in others when they see what I have built using my web skills. Geek enthusiast and fan of Asian culture.',
+        bio: 'Frontend Developer with hands-on experience in React and Adobe AEM, contributing to enterprise-level projects for Verizon. Skilled in reusable UI components, React-AEM integrations, servlets, API design, workflows, and accessibility improvements. Strong Agile background, debugging complex UIs, and delivering responsive, scalable, performance-oriented solutions.',
         downloadCv: 'Download CV',
         infoTitle: 'Information',
 
@@ -241,7 +264,7 @@ const resources = {
       },
 
       projects: {
-        title: 'Projects',
+        title: 'Portfolio',
         latestTitle: 'Latest project',
         latestImgAlt: 'Easter Egg cover',
         latestName: 'Easter Egg (Final project)',
@@ -298,11 +321,31 @@ const resources = {
         }
       },
 
+      experience: {
+        sectionTitle: 'Professional Experience',
+        
+        item1Title: 'Implementing SPA Solutions with React and AEM (2024–2025)',
+        item1Role: 'React Developer',
+        item1Scope: 'Implementing front-end requirements in React, with the backend managed by Adobe Experience Manager (AEM).',
+        item1Achievements: 'Developed reusable React components for high interactivity. Created AEM servlets and APIs for dynamic data rendering in React components.',
+        item1QualityFocus: 'Ensuring smooth React/AEM integration and solving cross-browser accessibility and display issues.',
+
+        item2Title: 'Backend Development and Workflow Management in AEM (2023–2024)',
+        item2Role: 'AEM Developer',
+        item2Achievements: 'Designed and implemented workflows to automate processes and developed servlets to fetch and manage data from the AEM repository.',
+        item2Process: 'Worked under the Agile methodology, implementing user stories and core component enhancements as per requirements.',
+
+        item3Title: 'Full Stack Project: Easter Egg (Generation Mexico, 2021-2022)',
+        item3Role: 'Java Developer',
+        item3Scope: 'Original concept design and mockup focusing on user interface and experience (UX/UI).',
+        item3Tech: 'Backend developed with Spring Boot for efficient data handling and integration, and Frontend using Bootstrap for a modern experience.'
+      },
+
       contact: {
         title: 'Contact me',
         sendMeEmail: 'Send me an email',
         text:
-          'I am currently looking for new opportunities. Whether you have a question or just want to say hi, I will do my best to reply!',
+          "I am currently open to new opportunities in AEM and Full Stack Java development. Whether it's to discuss a project, collaborate, or just say hello, please write to me!",
         mailImgAlt: 'Mail'
       },
 
@@ -327,3 +370,11 @@ i18n.use(initReactI18next).init({
 })
 
 export default i18n
+
+
+
+
+
+
+
+

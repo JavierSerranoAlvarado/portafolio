@@ -24,9 +24,6 @@
         font-size: 1.5rem;
     }
 
-    .intro--text p:nth-child(1) {
-        font-size: 2rem;
-    }
     .perfil__container--info{
         gap: 0;
         grid-template-columns: 1fr;
@@ -53,6 +50,12 @@
         margin: 0 auto;
         display: flex;
     }
+    .perfil__container {
+        text-align: center;
+    }
+    
+
+
 
     .perfil--responsive{
         grid-column: 1/2;
