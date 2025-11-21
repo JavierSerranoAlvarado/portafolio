@@ -31,7 +31,7 @@
 }
 
 h1, h2, h3, h4 {
-    color: var(--text-title);
+    color: var(--text-primary);
 }
 
 .header-menu {
@@ -45,7 +45,8 @@ h1, h2, h3, h4 {
 html{
     scroll-behavior: smooth;
 }
-body{
+body #root{
+    color:var(--text-primary);
     font-family: 'Lato', sans-serif;
     }
 
@@ -81,8 +82,11 @@ header a{
     align-items: center;
     height:3rem;
     background-color: var(--surface);
+    color:var(--text-primary);
 }
-
+.socialMedia .nav-item a, .socialMedia .navbar-brand, .btn-outline-secondary {
+   color:var(--text-primary)!important;
+}
 .socialMedia .container-fluid{
     background-color: var(--surface);
 }

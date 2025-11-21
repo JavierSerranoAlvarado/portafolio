@@ -11,13 +11,6 @@ export default function Navbar() {
     try { localStorage.setItem('lang', next) } catch {}
   }
 
-  const [theme, setTheme] = useState(() => {
-    try { return localStorage.getItem('theme') || 'light' } catch { return 'light' }
-  })
-  useEffect(() => {
-    document.documentElement.setAttribute('data-bs-theme', theme)
-    try { localStorage.setItem('theme', theme) } catch {}
-  }, [theme])
 
   return (
     <nav className="socialMedia navbar navbar-expand-lg border-bottom fixed-top">
